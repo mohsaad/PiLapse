@@ -1,0 +1,1 @@
+This program basically creates a method of creating timelapses for a set amount of time, by accessing your webcam every x seconds and taking a picture, and then stitching it into a complete video.
