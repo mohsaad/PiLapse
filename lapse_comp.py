@@ -15,12 +15,12 @@ if exf == True:
 print width
 print height
 interval = 1
-duration = 1000
+duration = 100
 num = 0;
 currtime = 0;
 
 #fourcc = cv2.VideoWriter_fourcc(*'XVID')
-outvid = cv2.VideoWriter('lapse.avi', 0, 30, (width,height))
+outvid = cv2.VideoWriter('lapse.avi', 0,10, (width,height))
 
 while(currtime <= duration):
 	[f,frame] = cap.read()
