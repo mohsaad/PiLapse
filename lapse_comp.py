@@ -15,22 +15,23 @@ if exf == True:
 print width
 print height
 interval = 1
-duration = 5
+duration = 1000
 num = 0;
 currtime = 0;
 
-outvid = cv2.VideoWriter('lapse.avi', -1, 1, (width,height))
+#fourcc = cv2.VideoWriter_fourcc(*'XVID')
+outvid = cv2.VideoWriter('lapse.avi', 0, 30, (width,height))
 
 while(currtime <= duration):
 	[f,frame] = cap.read()
 	if f == False:
 		break
-	cv2.imwrite(str(num) +'.png',frame)
+
 	outvid.write(frame)
 
 	#if ch == 27:
 	#	break
-	print num
+	#print num
 	num += 1
 	currtime += interval
 	time.sleep(interval)
